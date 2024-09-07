@@ -3,124 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Maven</title>
+    <title>Curso Maven Java</title>
     <style>
-		
-		#pu{
-			background-color:#BFBFBF
-		}
-		#colortitulo{
-			color :blue;
-			
-		}
-		p{
-			background-color:#4343A3;
-			color : white;
-			height : 50px;
-			padding:0;
-			margin:0;
-			font-size: 15px;
-			text-align : center;
-			line-height : 50px;
-		}			
-        /* Estilos para el menú */
+        body {
+            background-color: #F0F0F0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Estilos del menú */
         .menu {
             float: left;
             width: 300px;
             margin-right: 20px;
-            overflow-y: auto; /* Permitir desplazamiento vertical */
-            max-height: calc(100vh - 40px); /* Altura máxima igual al 100% del viewport menos el margen superior e inferior */
+            background-color: #1E90FF; /* Naranja oscuro */
+            padding: 10px;
+            border-radius: 5px;
         }
-      
+
+        .menu h2 {
+            color: #FFFFFF;
+            text-align: center;
+        }
+
         .menu a {
             display: block;
             padding: 10px;
-            background-color: #1300F2;
+            background-color: #4169E1; /* Naranja más intenso */
             color: white;
             text-decoration: none;
-            margin-bottom: 0px;
-            position: relative;
-            padding-left: 40px; /* Espacio para el icono */
-            border :solid 1px #1A1AB3;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            font-weight: bold;
         }
+
         .menu a:hover {
-            background-color: #0056b3;
+            background-color: #6495ED; /* Amarillo dorado */
         }
-        .menu #cab{
-			align: center;
-		}	
-        .menu a::before {
-            content: "";
-            width: 24px; /* Tamaño del icono */
-            height: 24px;
-            background-image: url(''); /* URL del ícono */
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            left: 10px; /* Posición del icono */
-            top: 50%; /* Centrado verticalmente */
-            transform: translateY(-50%);
-        }
-        /* Estilos para los submenús */
+
         .submenu {
             display: none;
             padding-left: 20px;
         }
+
         .submenu a {
-            display: block;
-            padding: 5px;
-            color: #333;
-            text-decoration: none;
+            background-color: #87CEFA; /* Verde lima */
+            color: #000;
+            font-weight: normal;
         }
-        /* Estilos para el contenedor del video */
+
+        /* Icono de flecha para desplegar submenús */
+        .menu a::after {
+            content: '▼';
+            float: right;
+            padding-right: 10px;
+        }
+
+        /* Estilo para el contenedor del video */
         #video-container {
             margin-top: 20px;
-            margin-left: 300px; /* Para dejar espacio al menú */
+            margin-left: 320px;
             text-align: center;
-            background-color :#4D4D4D;
-          
+            background-color: #E6E6E6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #1F2FE7; /* Naranja fuerte */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1F2FE7;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
-<header>
+<body>
 
-</header>
-<body id ="pu">
     <div class="menu">
-        <div id ="cab">
-			<img src="">
-		</div>
-		<p>INTRODUCCIÓN A MAVEN</p>
-        <a href="#" onclick="loadVideo('zz_oMmLEe9s')">¿Qué es Maven?</a>
-        <a href="#" onclick="loadVideo('GodQw7XwKeQ')">Concepto de artefacto</a>
-        <a href="#" onclick="loadVideo('videoId3')">pom.xml</a> <!-- Agrega más enlaces a otros videos aquí -->
-        <a href="#" onclick="loadVideo('videoId4')">Ciclo de vida</a>
-        <a href="#" onclick="loadVideo('videoId5')">Ejemplo en eclipse IDE</a>
-        
-        <h2>Descargar </h2>
-       
-        
+        <h2>Curso de Maven para Java</h2>
+        <!-- Temas del curso -->
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema1')">1. Introducción a Maven</a>
+        <div id="tema1" class="submenu">
+            <a href="#" onclick="loadVideo('3sYY8yZ7vWI')">¿Qué es Maven?</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Ventajas de Maven</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Estructura de carpetas</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Conceptos básicos</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Concepto de artefacto</a>
+            
+            
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema2')">2. Instalación y Configuración</a>
+        <div id="tema2" class="submenu">
+            <a href="#" onclick="loadVideo('SZf9UfoQAfU')">Instalación de Maven</a>
+            <a href="#" onclick="loadVideo('Q-2WyX7q0aQ')">Configuración del Entorno</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema3')">3. Estructura de un Proyecto Maven</a>
+        <div id="tema3" class="submenu">
+            <a href="#" onclick="loadVideo('nXZ5-6wGJxM')">Archivos Principales de Maven</a>
+            <a href="#" onclick="loadVideo('q7Xc2iRR4p0')">Estructura del Proyecto</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema4')">4. Ciclo de Vida de Maven</a>
+        <div id="tema4" class="submenu">
+            <a href="#" onclick="loadVideo('Klws8zKcOQ8')">Ciclo de Vida de Build</a>
+            <a href="#" onclick="loadVideo('aT-7Y0afJn0')">Fases y Goals</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema5')">5. Dependencias y Repositorios</a>
+        <div id="tema5" class="submenu">
+            <a href="#" onclick="loadVideo('Kxpm4h6u8dM')">Gestionar Dependencias</a>
+            <a href="#" onclick="loadVideo('t98Y8KqB4I8')">Repositorios de Maven</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema6')">6. Plugins de Maven</a>
+        <div id="tema6" class="submenu">
+            <a href="#" onclick="loadVideo('6T-p5icFATs')">Uso de Plugins</a>
+            <a href="#" onclick="loadVideo('xEw2KkQSoZw')">Configurar Plugins</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema7')">7. Construcción y Publicación</a>
+        <div id="tema7" class="submenu">
+            <a href="#" onclick="loadVideo('uTq7iqk2z98')">Construir un Proyecto</a>
+            <a href="#" onclick="loadVideo('2BL5W8GfF5g')">Publicar Artefactos</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema8')">8. Maven en la Integración Continua</a>
+        <div id="tema8" class="submenu">
+            <a href="#" onclick="loadVideo('9k6C0m7hAVc')">Integración con Jenkins</a>
+            <a href="#" onclick="loadVideo('M9H7tDp6JYg')">Automatización del Build</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema9')">9. Maven en Proyectos Multimódulo</a>
+        <div id="tema9" class="submenu">
+            <a href="#" onclick="loadVideo('9k1n4smctLU')">Configurar Proyectos Multimódulo</a>
+            <a href="#" onclick="loadVideo('2VkjS9k6A1g')">Gestión de Módulos</a>
+        </div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu('tema10')">10. Resolución de Problemas y Consejos</a>
+        <div id="tema10" class="submenu">
+            <a href="#" onclick="loadVideo('3U3nZikxz6Q')">Resolución de Problemas Comunes</a>
+            <a href="#" onclick="loadVideo('Fc3Vbr8xZfs')">Mejores Prácticas</a>
+        </div>
     </div>
-	<div id ="muki">
-		<h1 id="colortitulo">Arquitecto JAVA - MAVEN</h1>
-	</div>
+
     <div id="video-container">
-        <!-- El video se cargará aquí -->
+        <h1>Bienvenido al Curso de Maven para Java</h1>
+        <h2>¡Aprende a usar Maven para gestionar tus proyectos Java!</h2>
+        <p>Haz clic en los subtemas del menú para cargar el video correspondiente. Cada sección está diseñada para ayudarte a entender y utilizar Maven de manera efectiva.</p>
     </div>
 
     <script>
-        // Cargar reproductor de video vacío al cargar la página
-        window.onload = function() {
-            loadVideo('');
-        };
-		
-        function loadVideo(videoId) {
-            var videoContainer = document.getElementById('video-container');
-            videoContainer.innerHTML = '<iframe width="860" height="515" src="https://www.youtube.com/embed/' +videoId+ '" frameborder="0" allowfullscreen></iframe>';
+        // Función para mostrar/ocultar submenús y cerrar los demás
+        function toggleSubmenu(id) {
+            var allSubmenus = document.getElementsByClassName('submenu');
+            
+            // Cerrar todos los submenús
+            for (var i = 0; i < allSubmenus.length; i++) {
+                if (allSubmenus[i].id !== id) {
+                    allSubmenus[i].style.display = 'none';
+                }
+            }
+            
+            // Alternar el submenú clickeado
+            var submenu = document.getElementById(id);
+            submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
         }
 
-       
+        // Función para cargar el video en el contenedor
+        function loadVideo(videoId) {
+            var videoContainer = document.getElementById('video-container');
+            videoContainer.innerHTML = '<iframe width="860" height="515" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+        }
     </script>
+
 </body>
 </html>
 
