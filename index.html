@@ -6,9 +6,31 @@
     <title>Curso Maven Java</title>
     <style>
         body {
-            background-color: #F0F0F0;
+            background-color: #151437;
             font-family: Arial, sans-serif;
             color: #333;
+        }
+
+        /* Estilos del encabezado */
+        .header {
+            background-color: #000000; /* Gris medio */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header img {
+            width: 140px;
+            heigth :130px;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #FFA500; /* Naranja */
         }
 
         /* Estilos del menú */
@@ -16,20 +38,20 @@
             float: left;
             width: 300px;
             margin-right: 20px;
-            background-color: #1E90FF; /* Naranja oscuro */
+            background-color: #333; /* Gris oscuro */
             padding: 10px;
             border-radius: 5px;
         }
 
         .menu h2 {
-            color: #FFFFFF;
+            color: #FFA500; /* Naranja */
             text-align: center;
         }
 
         .menu a {
             display: block;
             padding: 10px;
-            background-color: #4169E1; /* Naranja más intenso */
+            background-color: #4D4D4D; /* Gris medio */
             color: white;
             text-decoration: none;
             margin-bottom: 5px;
@@ -38,7 +60,7 @@
         }
 
         .menu a:hover {
-            background-color: #6495ED; /* Amarillo dorado */
+            background-color: #FFA500; /* Naranja */
         }
 
         .submenu {
@@ -47,36 +69,29 @@
         }
 
         .submenu a {
-            background-color: #87CEFA; /* Verde lima */
-            color: #000;
+            background-color: #B3B3B3; /* Gris claro */
+            color: #333;
             font-weight: normal;
-        }
-
-        /* Icono de flecha para desplegar submenús */
-        .menu a::after {
-            content: '▼';
-            float: right;
-            padding-right: 10px;
         }
 
         /* Estilo para el contenedor del video */
         #video-container {
-            margin-top: 20px;
+            margin-top: 10px;
             margin-left: 320px;
             text-align: center;
-            background-color: #E6E6E6;
+            background-color: #494854; /* Gris suave */
             padding: 20px;
             border-radius: 10px;
         }
 
         h1 {
-            color: #1F2FE7; /* Naranja fuerte */
+            color: #FFA500; /* Naranja */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
         h2 {
-            color: #1F2FE7;
+            color: #FFA500;
             font-size: 20px;
             margin-bottom: 10px;
         }
@@ -84,84 +99,70 @@
         p {
             font-size: 16px;
             margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Descripción del video */
+        .video-description {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #FFB200;
         }
     </style>
 </head>
 <body>
 
+    <!-- Encabezado con imagen y texto -->
+    <div class="header">
+        <img src="javamaven.jpg" alt="Logo">
+        <h1>Bienvenido al Curso de Maven para Java</h1>
+        
+    </div>
+
     <div class="menu">
-        <h2>Curso de Maven para Java</h2>
+        <h2>Curso de Maven</h2>
         <!-- Temas del curso -->
         <a href="javascript:void(0)" onclick="toggleSubmenu('tema1')">1. Introducción a Maven</a>
         <div id="tema1" class="submenu">
-            <a href="#" onclick="loadVideo('3sYY8yZ7vWI')">¿Qué es Maven?</a>
-            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Ventajas de Maven</a>
-            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Estructura de carpetas</a>
-            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Conceptos básicos</a>
-            <a href="#" onclick="loadVideo('F6P-_6_hWjU')">Concepto de artefacto</a>
-            
-            
+            <a href="#" onclick="loadVideo('3sYY8yZ7vWI', 'Este video cubre los conceptos básicos de Maven, su estructura y cómo se utiliza en proyectos Java. Te ayudará a comprender qué es Maven y por qué es importante.')">¿Qué es Maven?</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU', 'Aquí verás las ventajas clave de usar Maven, incluyendo su capacidad para gestionar dependencias y automatizar el proceso de construcción.')">Ventajas de Maven</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU', 'Este video te enseña la estructura de carpetas estándar que Maven utiliza para organizar proyectos Java de manera eficiente.')">Estructura de carpetas</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU', 'Revisa los conceptos básicos de Maven y cómo estos te ayudarán a gestionar proyectos complejos con facilidad.')">Conceptos básicos</a>
+            <a href="#" onclick="loadVideo('F6P-_6_hWjU', 'Aprende sobre el concepto de artefacto en Maven y cómo se utiliza para definir el resultado de la construcción.')">Concepto de artefacto</a>
         </div>
 
         <a href="javascript:void(0)" onclick="toggleSubmenu('tema2')">2. Instalación y Configuración</a>
         <div id="tema2" class="submenu">
-            <a href="#" onclick="loadVideo('SZf9UfoQAfU')">Instalación de Maven</a>
-            <a href="#" onclick="loadVideo('Q-2WyX7q0aQ')">Configuración del Entorno</a>
+            <a href="#" onclick="loadVideo('SZf9UfoQAfU', 'Un tutorial paso a paso para instalar Maven en tu sistema.')">Instalación de Maven</a>
+            <a href="#" onclick="loadVideo('Q-2WyX7q0aQ', 'Este video te guiará en la configuración correcta de Maven para integrarlo con tu entorno de desarrollo.')">Configuración del Entorno</a>
         </div>
 
         <a href="javascript:void(0)" onclick="toggleSubmenu('tema3')">3. Estructura de un Proyecto Maven</a>
         <div id="tema3" class="submenu">
-            <a href="#" onclick="loadVideo('nXZ5-6wGJxM')">Archivos Principales de Maven</a>
-            <a href="#" onclick="loadVideo('q7Xc2iRR4p0')">Estructura del Proyecto</a>
+            <a href="#" onclick="loadVideo('nXZ5-6wGJxM', 'Aquí aprenderás sobre los archivos principales que usa Maven para definir y gestionar un proyecto.')">Archivos Principales de Maven</a>
+            <a href="#" onclick="loadVideo('q7Xc2iRR4p0', 'Una guía rápida sobre cómo está estructurado un proyecto en Maven.')">Estructura del Proyecto</a>
         </div>
 
         <a href="javascript:void(0)" onclick="toggleSubmenu('tema4')">4. Ciclo de Vida de Maven</a>
         <div id="tema4" class="submenu">
-            <a href="#" onclick="loadVideo('Klws8zKcOQ8')">Ciclo de Vida de Build</a>
-            <a href="#" onclick="loadVideo('aT-7Y0afJn0')">Fases y Goals</a>
+            <a href="#" onclick="loadVideo('Klws8zKcOQ8', 'Este video detalla el ciclo de vida de build de Maven y cómo se gestiona el proceso de construcción.')">Ciclo de Vida de Build</a>
+            <a href="#" onclick="loadVideo('aT-7Y0afJn0', 'Explora las fases y goals en Maven y cómo estos te permiten controlar el flujo de construcción de un proyecto.')">Fases y Goals</a>
         </div>
 
         <a href="javascript:void(0)" onclick="toggleSubmenu('tema5')">5. Dependencias y Repositorios</a>
         <div id="tema5" class="submenu">
-            <a href="#" onclick="loadVideo('Kxpm4h6u8dM')">Gestionar Dependencias</a>
-            <a href="#" onclick="loadVideo('t98Y8KqB4I8')">Repositorios de Maven</a>
+            <a href="#" onclick="loadVideo('Kxpm4h6u8dM', 'Este video explica cómo gestionar dependencias dentro de un proyecto Maven y cómo encontrar las necesarias.')">Gestionar Dependencias</a>
+            <a href="#" onclick="loadVideo('t98Y8KqB4I8', 'Aprende a usar los repositorios de Maven para almacenar y compartir artefactos.')">Repositorios de Maven</a>
         </div>
 
-        <a href="javascript:void(0)" onclick="toggleSubmenu('tema6')">6. Plugins de Maven</a>
-        <div id="tema6" class="submenu">
-            <a href="#" onclick="loadVideo('6T-p5icFATs')">Uso de Plugins</a>
-            <a href="#" onclick="loadVideo('xEw2KkQSoZw')">Configurar Plugins</a>
-        </div>
+        <!-- Más temas aquí... -->
 
-        <a href="javascript:void(0)" onclick="toggleSubmenu('tema7')">7. Construcción y Publicación</a>
-        <div id="tema7" class="submenu">
-            <a href="#" onclick="loadVideo('uTq7iqk2z98')">Construir un Proyecto</a>
-            <a href="#" onclick="loadVideo('2BL5W8GfF5g')">Publicar Artefactos</a>
-        </div>
-
-        <a href="javascript:void(0)" onclick="toggleSubmenu('tema8')">8. Maven en la Integración Continua</a>
-        <div id="tema8" class="submenu">
-            <a href="#" onclick="loadVideo('9k6C0m7hAVc')">Integración con Jenkins</a>
-            <a href="#" onclick="loadVideo('M9H7tDp6JYg')">Automatización del Build</a>
-        </div>
-
-        <a href="javascript:void(0)" onclick="toggleSubmenu('tema9')">9. Maven en Proyectos Multimódulo</a>
-        <div id="tema9" class="submenu">
-            <a href="#" onclick="loadVideo('9k1n4smctLU')">Configurar Proyectos Multimódulo</a>
-            <a href="#" onclick="loadVideo('2VkjS9k6A1g')">Gestión de Módulos</a>
-        </div>
-
-        <a href="javascript:void(0)" onclick="toggleSubmenu('tema10')">10. Resolución de Problemas y Consejos</a>
-        <div id="tema10" class="submenu">
-            <a href="#" onclick="loadVideo('3U3nZikxz6Q')">Resolución de Problemas Comunes</a>
-            <a href="#" onclick="loadVideo('Fc3Vbr8xZfs')">Mejores Prácticas</a>
-        </div>
     </div>
 
     <div id="video-container">
-        <h1>Bienvenido al Curso de Maven para Java</h1>
-        <h2>¡Aprende a usar Maven para gestionar tus proyectos Java!</h2>
-        <p>Haz clic en los subtemas del menú para cargar el video correspondiente. Cada sección está diseñada para ayudarte a entender y utilizar Maven de manera efectiva.</p>
+        <h2>Introducción al Curso de Maven</h2>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/3sYY8yZ7vWI" frameborder="0" allowfullscreen></iframe>
+        <p class="video-description">Este video cubre los conceptos básicos de Maven, su estructura y cómo se utiliza en proyectos Java. Te ayudará a comprender qué es Maven y por qué es importante.</p>
     </div>
 
     <script>
@@ -181,13 +182,15 @@
             submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
         }
 
-        // Función para cargar el video en el contenedor
-        function loadVideo(videoId) {
+        // Función para cargar el video en el contenedor con descripción
+        function loadVideo(videoId, description) {
             var videoContainer = document.getElementById('video-container');
-            videoContainer.innerHTML = '<iframe width="860" height="515" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+            videoContainer.innerHTML = `
+                <h2>Video del Curso de Maven</h2>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                <p class="video-description">${description}</p>`;
         }
     </script>
 
 </body>
 </html>
-
